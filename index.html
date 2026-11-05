@@ -152,6 +152,12 @@ section { padding-block: 88px; }
 .msgbox { max-width: 640px; margin: 28px auto 0; background: var(--surface); border: 1px solid var(--line); border-radius: 26px; padding: 22px; display: grid; gap: 12px; }
 .msgbox pre { margin: 0; white-space: pre-wrap; font-family: var(--font-body); font-size: 0.95rem; background: var(--bg); padding: 14px; border-radius: 16px; }
 .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.mapbox { max-width: 640px; margin: 28px auto 0; background: var(--surface); border: 1px solid var(--line); border-radius: 26px; overflow: hidden; box-shadow: 0 12px 30px rgba(20,41,90,.08); }
+.mapbox iframe { display: block; width: 100%; height: 300px; border: 0; }
+.mapbox-body { padding: 18px 22px 22px; display: grid; gap: 14px; }
+.mapbox-body p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+.mapbox-body b { color: var(--fg); }
+a.ghost { text-decoration: none; display: inline-flex; align-items: center; }
 .ghost { font: inherit; font-weight: 700; background: transparent; color: var(--fg); border: 1px solid var(--line); border-radius: 999px; padding: 11px 20px; cursor: pointer; }
 .status { font-size: 0.85rem; color: var(--muted); min-height: 1.3em; }
 
@@ -386,6 +392,17 @@ gtag('config', 'AW-17129029039');
         <a class="lbtn maps-link" href="#" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><b>Como chegar<small>R. Azevedo Lima, 37 · Parque Leopoldina</small></b><span class="chev" aria-hidden="true">›</span></a>
         <a class="lbtn rev-link" href="#" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></span><b>Avalie-nos<small>Deixe sua opinião no Google</small></b><span class="chev" aria-hidden="true">›</span></a>
         <div class="lbtn" style="cursor:default"><span class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><b>Check-in 14h · Check-out 12h<small>Recepção 24 horas</small></b><span></span></div>
+      </div>
+
+      <div class="mapbox" id="mapa">
+        <iframe src="https://www.google.com/maps?q=Pousada%20El%20Shaddai%2C%20R.%20Azevedo%20Lima%2C%2037%20-%20Parque%20Leopoldina%2C%20Campos%20dos%20Goytacazes%20-%20RJ&amp;output=embed" title="Mapa da Pousada El Shaddai" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <div class="mapbox-body">
+          <p><b>R. Azevedo Lima, 37</b> · Parque Leopoldina · Campos dos Goytacazes, RJ</p>
+          <div class="actions">
+            <a class="pill maps-link" href="#" target="_blank" rel="noopener">Google Maps</a>
+            <a class="ghost" href="https://waze.com/ul?q=R.%20Azevedo%20Lima%2C%2037%2C%20Campos%20dos%20Goytacazes&amp;navigate=yes" target="_blank" rel="noopener">Waze</a>
+          </div>
+        </div>
       </div>
 
       <div class="msgbox">
